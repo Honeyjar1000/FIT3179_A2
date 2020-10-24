@@ -17,7 +17,7 @@
   } ],  
   "transform": [ 
     {"filter": "Continent_selection == null || datum.continent == Continent_selection"}, 
-  ], .
+  ],
   "selection": { 
     "continent_highlight": { 
       "type": "multi", 
