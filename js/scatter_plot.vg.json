@@ -6,6 +6,15 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
   },
+  "params": [ { 
+    "name": "Continent_selection", 
+    "bind": { 
+      "input": "select", 
+      "options": [ null, "North America", "South America", "Europe", "Africa", "Asia", "Oceania" ], 
+      "labels":[ "Show All", "North America", "South America", "Europe", "Africa", "Asia", "Oceania" ], 
+      "name": "Continent Selection: " 
+    } 
+  } ],  
   "mark": "circle",
   "encoding": {
     "x": {
