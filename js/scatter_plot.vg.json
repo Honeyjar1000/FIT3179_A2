@@ -33,7 +33,7 @@
       "legend": {"format": ".1s"}
     },
     "tooltip": [
-      {"field": "Country", "type": "nominal"},
+      {"field": "Country_Or_Region", "type": "nominal"},
       {"field": "Social_support", "type": "quantitative", "format": ","},
       {"field": "Score", "type": "quantitative", "format": ","},
       {"field": "GDP_per_capita", "type": "quantitative", "format": ","},
