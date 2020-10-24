@@ -22,8 +22,8 @@
       "axis": { "tickCount": 0.1},
       "scale": {"type": "linear", "domain":[2, 8]}
     },
-    "color": "#e41a1c",
-    "opacity": {"value": 0.2},
+    "color": "#e07b39",
+    "opacity": {"value": 0.5},
     "size": {
       "field": "GDP_per_capita",
       "type": "quantitative",
