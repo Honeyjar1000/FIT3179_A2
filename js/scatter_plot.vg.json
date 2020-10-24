@@ -23,14 +23,14 @@
       "scale": {"type": "linear", "domain":[2, 8]}
     },
     "color": { 
-      "field": "continent", 
+      "field": "Continent", 
       "type": "nominal", 
       "scale": { 
-              "domain": [ "NA", "SA", "EUR", "AFR", "ASIA", "OCE" ], 
-               "range": [ "#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628" ] 
-        } 
+        "domain": [ "NA", "SA", "EUR", "AFR", "ASIA", "OCE" ], 
+        "range": [ "#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628" ] 
+      } 
     }, 
-    "opacity": { "value": 0.6 },
+    "opacity": { "value": 0.6 },    
     "size": {
       "field": "GDP_per_capita",
       "type": "quantitative",
