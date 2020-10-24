@@ -6,7 +6,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
   },
-  "mark": "point",
+  "mark": "circle",
   "encoding": {
     "x": {
       "field": "Social_support",
