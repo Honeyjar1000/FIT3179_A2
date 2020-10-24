@@ -153,5 +153,5 @@ Overall rank,Country_Or_Region,Score,GDP_per_capita,Social_support,Healthy_life_
 152,Rwanda,3.334,0.359,0.711,0.614,0.555,0.217,0.411,AFR
 153,Tanzania,3.231,0.476,0.885,0.499,0.417,0.276,0.147,AFR
 154,Afghanistan,3.203,0.35,0.517,0.361,0,0.158,0.025,ASIA
-155,Central African Republic,3.083,0.026,0,0.105,0.225,0.235,0.035,AFR
+155,Central African Rep.,3.083,0.026,0,0.105,0.225,0.235,0.035,AFR
 156,South Sudan,2.853,0.306,0.575,0.295,0.01,0.202,0.091,AFR
