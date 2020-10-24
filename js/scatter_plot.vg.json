@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "height": 500,
   "width": 500,
-  "title": "COVID-19 Cases per Country (13 Oct 2020)",
+  "title": "World Happiness",
   "data": {
     "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
   },
@@ -20,41 +20,41 @@
     }
   },
   "transform":[
-    {"filter": "datum.Active > 0"},
-    {"filter": "datum.Deaths > 0"},
-    {"filter": "datum.Population > Population_Above"},
-    {"calculate": "datum.Confirmed/datum.Population", "as": "Cases per 10,000 Population"}
+    {"filter": "datum.Social_support > 0"},
+    {"filter": "datum.Score > 0"},
+    {"filter": "datum.GDP_per_capita > 0"}
   ],
   "mark": "point",
   "encoding": {
     "x": {
-      "field": "Confirmed",
+      "field": "Social_support",
       "type": "quantitative",
-      "title":"Confirmed Cases",
-      "axis": {"tickCount": 7},
-      "scale": {"type": "log",  "domain":[1, 10000000]}
+      "title":"Social Support Ranking",
+      "axis": {"tickCount": 0.001},
+      "scale": {"type": "linear",  "domain":[0, 2]}
     },
     "y": {
-      "field": "Deaths",
+      "field": "Score",
       "type": "quantitative",
-      "axis": { "tickCount": 6},
-      "scale": {"type": "log", "domain":[1, 1000000]}
+      "title":"Happiness Score",
+      "axis": { "tickCount": 0.1},
+      "scale": {"type": "linear", "domain":[2, 8]}
     },
-    "size": {"field": "Population", "type": "quantitative",  "scale": {"range": [30, 500]}
+    "size": {"field": "GDP_per_capita", "type": "quantitative",  "scale": {"range": [0, 2]}
 },
-    "fill": {"field": "Continent",  "type": "nominal","scale": {"domain":["North America", "South America", "Europe", "Africa", "Asia", "Oceania"], "range": ["#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]}},
-    "color": {"field": "Continent", "type": "nominal","scale": {"domain":["North America", "South America", "Europe", "Africa", "Asia", "Oceania"],"range": ["#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]}
-    },
-    "opacity": {
-      "condition": {"selection": "continent_selection", "value": 0.8},
-      "value": 0.2
+    //"fill": {"field": "Country_Or_Region",  "type": "nominal","scale": {"domain":["North America", "South America", "Europe", "Africa", "Asia", "Oceania"], "range": ["#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]}},
+    //"color": {"field": "Continent", "type": "nominal","scale": {"domain":["North America", "South America", "Europe", "Africa", "Asia", "Oceania"],"range": ["#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]}
+    //},
+    //"opacity": {
+     // "condition": {"selection": "continent_selection", "value": 0.8},
+     // "value": 0.2
     },
     "tooltip": [
       {"field": "Country", "type": "nominal"},
-      {"field": "Confirmed", "type": "quantitative", "format": ","},
-      {"field": "Active", "type": "quantitative", "format": ","},
-      {"field": "Deaths", "type": "quantitative", "format": ","},
-      {"field": "Recovered", "type": "quantitative", "format": ","}
+      {"field": "Social_support", "type": "quantitative", "format": ","},
+      {"field": "Score", "type": "quantitative", "format": ","},
+      {"field": "GDP_per_capita", "type": "quantitative", "format": ","},
+      {"field": "Social_support", "type": "quantitative", "format": ","}
     ]
 
   }
