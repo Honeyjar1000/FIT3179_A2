@@ -22,7 +22,11 @@
       "axis": { "tickCount": 0.1},
       "scale": {"type": "linear", "domain":[2, 8]}
     },
-    "size": {"field": "GDP_per_capita", "type": "quantitative",  "scale": {"range": [0, 2]}
+    "size": {
+      "field": "GDP_per_capita", 
+      "type": "quantitative",  
+      "scale": {"type": "linear", "range": [0, 2]}
+   }
 },
     "tooltip": [
       {"field": "Country", "type": "nominal"},
