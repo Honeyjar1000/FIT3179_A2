@@ -33,7 +33,7 @@
       "title":"Social Support Ranking",
       "axis": {"tickCount": 0.001},
       "scale": {"type": "linear",  "domain":[0, 2]}
-    }
+    },
     "y": {
       "field": "Score",
       "type": "quantitative",
