@@ -85,6 +85,5 @@
       {"field": "GDP_per_capita", "type": "quantitative", "format": ","},
       {"field": "Social_support", "type": "quantitative", "format": ","}
     ]
-
   }
 }
