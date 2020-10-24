@@ -10,11 +10,18 @@
     "name": "Continent_selection", 
     "bind": { 
       "input": "select", 
-      "options": [ null, "North America", "South America", "Europe", "Africa", "Asia", "Oceania" ], 
+      "options": [ null, "NA", "SA", "EUR", "AFR", "ASIA", "OCE" ], 
       "labels":[ "Show All", "North America", "South America", "Europe", "Africa", "Asia", "Oceania" ], 
       "name": "Continent Selection: " 
     } 
   } ],  
+  "transform": [ 
+    {"filter": "Continent_selection == null || datum.continent == Continent_selection"}, 
+  ], 
+  "selection": { 
+    "continent_highlight": { 
+      "type": "multi", "fields": ["continent"], "bind": "legend" } },
+  
   "mark": "circle",
   "encoding": {
     "x": {
