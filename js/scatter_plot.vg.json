@@ -7,6 +7,7 @@
     "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
   },
   "mark": "point",
+  "color": "#e07b39",
   "encoding": {
     "x": {
       "field": "Social_support",
@@ -22,8 +23,6 @@
       "axis": { "tickCount": 0.1},
       "scale": {"type": "linear", "domain":[2, 8]}
     },
-    "color": "#e07b39",
-    "opacity": {"value": 0.5},
     "size": {
       "field": "GDP_per_capita",
       "type": "quantitative",
