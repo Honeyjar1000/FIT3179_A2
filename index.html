@@ -13,6 +13,8 @@
 </head>
 <body>
   
+<div id="choropleth_map"></div> 
+  
 <div id="scatter_plot"></div>
 
 <script type="text/javascript">
@@ -21,7 +23,12 @@
   vegaEmbed('#scatter_plot', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+  
+  var spec2 = "js/chloropleth_map.vg.json";
+  vegaEmbed('#scatter_plot', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error)
+  
 </script>
-
 </body>
 </html>
