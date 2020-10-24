@@ -17,11 +17,14 @@
   } ],  
   "transform": [ 
     {"filter": "Continent_selection == null || datum.continent == Continent_selection"}, 
-  ], 
+  ], .
   "selection": { 
     "continent_highlight": { 
-      "type": "multi", "fields": ["continent"], "bind": "legend" } },
-  
+      "type": "multi", 
+      "fields": ["continent"], 
+      "bind": "legend" 
+    } 
+  },
   "mark": "circle",
   "encoding": {
     "x": {
@@ -30,7 +33,7 @@
       "title":"Social Support Ranking",
       "axis": {"tickCount": 0.001},
       "scale": {"type": "linear",  "domain":[0, 2]}
-    },
+    },................
     "y": {
       "field": "Score",
       "type": "quantitative",
@@ -41,7 +44,7 @@
     "color": { 
       "field": "continent", 
       "type": "nominal", 
-      "scale": { 
+      "scale": { ....
         "domain": [ 
           "NA", 
           "SA", 
