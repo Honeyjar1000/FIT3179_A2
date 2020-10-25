@@ -1,5 +1,5 @@
 #scatter_plot {
-	possition: absolute;
+	position: absolute;
 	top:100px;
 	bottom: 100px; 
 	left: 100px;
@@ -9,7 +9,7 @@
 }
 
 #choropleth_map {
-	possition: absolute;
+	position: absolute;
 	top:100px;
 	bottom: 100px; 
 	left: 100px;
@@ -19,7 +19,7 @@
 }
 
 #barChart {
-	possition: absolute;
+	position: absolute;
 	top:100px;
 	bottom: 100px; 
 	left: 100px;
