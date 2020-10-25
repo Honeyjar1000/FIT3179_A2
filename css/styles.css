@@ -1,5 +1,5 @@
 #scatter_plot {
-	position: relative;
+	position: absolute;
 	top:1%;
 	margin-left: 10%;
 	left: 1%;
@@ -7,13 +7,13 @@
 }
 
 #choropleth_map {
-	position: relative;
+	position: absolute;
 	top: 1%;
 	width: 40%;
+	float: left;
 }
 
 #barChart {
-	float: top;
 	position: relative;
 	margin-top: 5px;
 	/*height: 1000px;
