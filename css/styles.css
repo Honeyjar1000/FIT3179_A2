@@ -1,14 +1,14 @@
 #scatter_plot {
 	position: absolute;
-	margin-left: 50%;
-	top: 20px;
+	margin-left: 650%;
+	top: 50px;
 	left: 1%;
 	width: 30%;
 }
 
 #choropleth_map {
 	position: absolute;
-	top: 20px;
+	top: 50px;
 	float: left;
 	width: 30%;
 }
