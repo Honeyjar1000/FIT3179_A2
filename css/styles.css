@@ -1,29 +1,22 @@
 #scatter_plot {
 	position: absolute;
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+	top:1%;
+	left: 1%;
+	height: 1000px;
+	width: 800px;
 }
 
 #choropleth_map {
-	position: absolute;
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+	position: relative;
+	margin-left: 2%;
+	top: 1%;
+	height: 1000px;
+	width: 800px;
 }
 
 #barChart {
-	position: absolute;
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
+	position: relative;
+	margin-top:100px;
 	/*height: 1000px;
 	width: 800px;*/
 }
