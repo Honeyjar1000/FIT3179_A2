@@ -6,7 +6,15 @@
   },
   "mark": "bar",
   "encoding": {
-    "x": {"field": "Country_Or_Region", "type": "nominal"},
-    "y": {"field": "Perceptions_of_corruption", "type": "quantitative"}
+    "x": {"field": "Country_Or_Region", "type": "nominal", "title": "Country"},
+    "y": {"field": "Perceptions_of_corruption", "type": "quantitative", "title": "Perception Of Corruption"},
+    "color": {
+      "field": "continent", 
+      "type": "nominal", 
+      "scale": { 
+        "domain": [ "NA", "SA", "EUR", "AFR", "ASIA", "OCE" ], 
+        "range": [ "#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628" ] 
+      } 
+    },
   }
 }
