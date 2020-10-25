@@ -13,7 +13,7 @@
       "name": "Continent Selection: " 
       } 
     } ], 
-  "transform": [ {"filter": "Continent_selection == 'NA'" || datum.continent == Continent_selection"} ], 
+  "transform": [ {"filter": "Continent_selection == NA" || datum.continent == Continent_selection"} ], 
   "selection": { "continent_highlight": { "type": "multi", "fields": ["continent"], "bind": "legend" } },
   "mark": "bar",
   "encoding": {
