@@ -3,14 +3,14 @@
 	margin-left: 50%;
 	top: 20px;
 	left: 1%;
-	width: 40%;
+	width: 30%;
 }
 
 #choropleth_map {
 	position: absolute;
 	top: 20px;
 	float: left;
-	width: 40%;
+	width: 30%;
 }
 
 #barChart {
