@@ -14,7 +14,7 @@
       "scale": { 
         "domain": [ "NA", "SA", "EUR", "AFR", "ASIA", "OCE" ], 
         "range": [ "#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628" ] 
-      } 
-    },
+      }
+    }
   }
 }
