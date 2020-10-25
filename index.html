@@ -12,6 +12,8 @@
 <body>
 <div id="choropleth_map"></div> 
 <div id="scatter_plot"></div>
+<div id="barChart"></div>
+  
 <script type="text/javascript">
 
   var spec2 = "js/scatter_plot.vg.json";
@@ -24,6 +26,11 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error)
  
+  var spec4 = "js/barChart.vg.json";
+  vegaEmbed('#barChart', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error)
+  
 </script>
 </body>
 </html>
