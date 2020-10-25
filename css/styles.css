@@ -2,14 +2,14 @@
 	position: relative;
 	top:1%;
 	left: 1%;
-	width: 800px;
+	width: 40%;
 }
 
 #choropleth_map {
 	position: relative;
 	margin-left: 2%;
 	top: 1%;
-	width: 800px;
+	width: 40%;
 }
 
 #barChart {
