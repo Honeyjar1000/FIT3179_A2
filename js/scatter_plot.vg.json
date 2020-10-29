@@ -46,6 +46,7 @@
     "color": { 
       "field": "continent", 
       "type": "nominal", 
+      "title": "Continent",
       "scale": {
         "domain": [ 
           "NA", 
