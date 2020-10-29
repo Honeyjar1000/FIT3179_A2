@@ -71,7 +71,7 @@
     "size": {
       "field": "GDP_per_capita",
       "type": "quantitative",
-      "name": "GPD Per Capita",
+      "title": "GPD Per Capita",
       "scale": {
           "type": "linear",
           "domain": [0,2]
