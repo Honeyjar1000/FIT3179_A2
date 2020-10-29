@@ -74,8 +74,9 @@
       "type": "quantitative",
       "title": "GPD Per Capita",
       "scale": {
-          "type": "linear",
-          "domain": [0,2]
+          "type": "threshhold",
+          "domain": [0,0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8.2.0],
+          "range": [0,0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8.2.0]
       },
       "legend": {"format": ".1s"}
     },
