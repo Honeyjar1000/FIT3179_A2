@@ -16,6 +16,12 @@
 	margin: 10px 10px 10px 10px;
 }
 
+#pieChart {
+	display: inline-block;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
 b {
 	font-color: "white";
 	position: absolute;
