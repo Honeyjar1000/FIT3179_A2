@@ -7,6 +7,9 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
   },
+  "selection": {
+    "hover": {"type": "multi", "on": "mouseover", "empty": "none"}
+  },
   "params": [
     {
       "name": "Continent_selection",
@@ -33,21 +36,21 @@
   ],
   "mark": "arc",
   "encoding": {
-    "theta": {
-      "field": "Healthy_life_expectancy", 
-      "type": "quantitative"
-    },
+    "theta": {"field": "Healthy_life_expectancy", "type": "quantitative"},
     "color": {
-      "field": "Country_Or_Region", 
-      "type": "nominal", 
+      "field": "Country_Or_Region",
+      "type": "nominal",
       "legend": null,
-      "scale": {
-        "scheme": "set2"
-      }
+      "scale": {"scheme": "set2"},
+      "condition": {"selection": "hover", "value": "gray"}
     },
     "tooltip": [
       {"field": "Country_Or_Region", "type": "nominal", "title": "Country"},
-      {"field": "Healthy_life_expectancy", "type": "quantitative", "title": "Life Expectancy"}
+      {
+        "field": "Healthy_life_expectancy",
+        "type": "quantitative",
+        "title": "Life Expectancy"
+      }
     ]
   },
   "background": "black"
