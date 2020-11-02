@@ -2,6 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"},
   "mark": "bar",
+  "width": 500,
+  "height": 400,
+  "autosize": "none",
   "encoding": {
     "x": {
       "field": "Country_Or_Region",
