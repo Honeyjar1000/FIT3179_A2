@@ -77,5 +77,6 @@
       {"field": "Perceptions_of_corruption", "title": "Perception Of Corruption", "type": "quantitative"}
     ]
   },
-  "background": "black"
+  "background": "black",
+  "view": {"stroke": null}
 }
