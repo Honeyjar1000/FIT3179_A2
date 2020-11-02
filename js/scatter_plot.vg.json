@@ -113,6 +113,5 @@
       }
     ]
   },
-  "background": "black",
-  "view": {"stroke": null}
+  "background": "black"
 }
