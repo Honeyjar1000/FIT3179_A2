@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 500,
   "height": 400,
-  "autosize": "none",
   "title": "World Happiness",
   "data": {
     "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
@@ -22,7 +21,7 @@
           "Asia",
           "Oceania"
         ],
-        "name": "Continent Selection: "
+        "name": "Continent: "
       }
     }
   ],
@@ -37,26 +36,22 @@
       "fields": ["continent"],
       "bind": "legend"
     },
-    "hover": {
-      "type": "multi", 
-      "on": "mouseover", 
-      "empty": "none"
-    }    
+    "hover": {"type": "multi", "on": "mouseover", "empty": "none"}
   },
   "mark": "circle",
   "encoding": {
     "x": {
       "field": "Social_support",
       "type": "quantitative",
-      "title": "Social Support Ranking",
-      "axis": {"tickCount": 0.001},
+      "title": "Social Support",
+      "axis": {"grid": false, "labelColor": "white", "titleColor": "white"},
       "scale": {"type": "linear", "domain": [0, 2]}
     },
     "y": {
       "field": "Score",
       "type": "quantitative",
-      "title": "Happiness Score",
-      "axis": {"tickCount": 0.1},
+      "title": "Country",
+      "axis": {"grid": false, "labelColor": "white", "titleColor": "white"},
       "scale": {"type": "linear", "domain": [2, 8]}
     },
     "color": {
@@ -74,22 +69,20 @@
           "#a65628"
         ]
       },
-      "condition": {"selection": "hover", "value": "gray"}
+      "condition": {"selection": "hover", "value": "gray"},
+      "legend": {"title": null, "labelColor": "white"}
     },
-    "opacity": {
-      "value": 0.8,
-      "condition": {"selection": "hover", "value": 1}
-    },
+    "opacity": {"value": 0.8, "condition": {"selection": "hover", "value": 1}},
     "size": {
       "field": "GDP_per_capita",
       "type": "quantitative",
       "title": "GPD Per Capita",
+      "legend": {"labelColor": "white", "titleColor": "white"},
       "scale": {
         "type": "threshold",
-        "domain": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2],
-        "range": [2, 4, 8, 16, 32, 64, 128, 246, 492, 984]
-      },
-      "legend": {"format": ".1s"}
+        "domain": [0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6],
+        "range": [4, 8, 16, 32, 64, 128, 492, 984]
+      }
     },
     "tooltip": [
       {"field": "Country_Or_Region", "title": "Country", "type": "nominal"},
