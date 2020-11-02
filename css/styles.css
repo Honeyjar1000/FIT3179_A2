@@ -1,22 +1,19 @@
 #scatter_plot {
 	position: absolute;
-	margin-left: 60%;
-	top: 50px;
+	margin: 10px 10px 10px 10px;
 	left: 1%;
-	width: 30%;
 }
 
 #choropleth_map {
 	position: absolute;
-	top: 50px;
 	float: left;
-	width: 30%;
+	margin: 10px 10px 10px 10px;
 }
 
 #barChart {
 	position: relative;
-	top: 650px;
-	margin: auto;
+	float: left;
+	margin: 10px 10px 10px 10px;
 }
 
 b {
