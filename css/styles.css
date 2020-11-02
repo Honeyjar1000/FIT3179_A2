@@ -17,7 +17,12 @@
 }
 
 b {
+	font-color: "white";
 	position: absolute;
 	font-size: 20px;
 	margin: auto;
+}
+
+body {
+	background-color: #4f4141;
 }
