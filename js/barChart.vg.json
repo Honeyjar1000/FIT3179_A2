@@ -14,8 +14,15 @@
       "bind": {
         "input": "select",
         "options": ["NA", "SA", "EUR", "AFR", "ASIA", "OCE"],
-        "labels": ["North America","South America", "Europe", "Africa", "Asia", "Oceania"],
-        "name": "Continent Selection: "
+        "labels": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent: "
       }
     }
   ],
@@ -27,9 +34,13 @@
   "selection": {
     "continent_highlight": {
       "type": "multi",
-      "init": {"continent": "NA"},
       "fields": ["continent"],
       "bind": "legend"
+    },
+    "hover": { 
+      "type": "multi", 
+      "on": "mouseover", 
+      "empty": "none" 
     }
   },
   "mark": "bar",
@@ -58,7 +69,13 @@
           "#377eb8",
           "#a65628"
         ]
-      }
-    }
-  }
+      },
+      "condition": {"selection": "hover", "value": "gray"}
+    },
+    "tooltip": [
+      {"field": "Country_Or_Region", "title": "Country", "type": "nominal"},
+      {"field": "Perceptions_of_corruption", "title": "Perception Of Corruption", "type": "quantitative"}
+    ]
+  },
+  "background": "black"
 }
