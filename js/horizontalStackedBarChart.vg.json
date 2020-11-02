@@ -1,28 +1,20 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"},
-  "mark": "bar",
-  "width": 500,
-  "height": 400,
-  "autosize": "none",
+  "description": "A simple pie chart with embedded data.",
+  "data": {
+    "values": [
+      {"category": 1, "value": 4},
+      {"category": 2, "value": 6},
+      {"category": 3, "value": 10},
+      {"category": 4, "value": 3},
+      {"category": 5, "value": 7},
+      {"category": 6, "value": 8}
+    ]
+  },
+  "mark": "arc",
   "encoding": {
-    "x": {
-      "field": "Country_Or_Region",
-      "type": "nominal",
-      "title": "Country"
-    },
-    "y": {
-      "aggregate": "count",
-      "type": "quantitative"
-    },
-    "color": {
-      "fields": ["Healthy_life_expectancy", "Freedom_to_make_life_choices", "Generosity"],
-      "type": "nominal",
-      "scale": {
-        "domain": ["Healthy_life_expectancy", "Freedom_to_make_life_choices", "Generosity"],
-        "range": ["#e7ba52", "#c7c7c7", "#aec7e8"]
-      },
-      "title": "Wellfair"
-    }
-  }
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "category", "type": "nominal"}
+  },
+  "view": {"stroke": null}
 }
