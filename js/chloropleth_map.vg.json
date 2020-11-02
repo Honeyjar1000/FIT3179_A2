@@ -3,6 +3,7 @@
   "title": "Average Happiness Score By Country",
   "width": 500,
   "height": 400,
+
   "data": {
     "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/js/worldmap.json",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
@@ -42,7 +43,11 @@
           "type": "linear",
           "scheme": "reds"
       },
-      "condition": {"selection": "hover", "value": "gray"}
+      "condition": {"selection": "hover", "value": "gray"},
+      "legend": {
+        "titleColor": "white",
+        "labelColor": "white"
+      }
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
