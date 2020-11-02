@@ -3,13 +3,10 @@
   "description": "A simple pie chart with embedded data.",
   "width": 500,
   "height": 400,
-  "autosize": "none",
   "data": {
     "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
   },
-  "selection": {
-    "hover": {"type": "multi", "on": "mouseover", "empty": "none"}
-  },
+  "selection": {"hover": {"type": "multi", "on": "mouseover", "empty": "none"}},
   "params": [
     {
       "name": "Continent_selection",
@@ -35,6 +32,10 @@
     }
   ],
   "mark": "arc",
+  "title": {
+    "text": "Life Expectancy",
+    "color": "white"
+  },
   "encoding": {
     "theta": {"field": "Healthy_life_expectancy", "type": "quantitative"},
     "color": {
@@ -42,14 +43,14 @@
       "type": "nominal",
       "legend": null,
       "scale": {"scheme": "set2"},
-      "condition": {"selection": "hover", "value": "gray"}
+      "condition": {"selection": "hover", "value": "gray"},
+      "title": "Life Expectancy"
     },
     "tooltip": [
       {"field": "Country_Or_Region", "type": "nominal", "title": "Country"},
       {
         "field": "Healthy_life_expectancy",
-        "type": "quantitative",
-        "title": "Life Expectancy"
+        "type": "quantitative"
       }
     ]
   },
