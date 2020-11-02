@@ -1,17 +1,17 @@
 #scatter_plot {
-	position: absolute;
+	display: inline;
 	margin: 10px 10px 10px 10px;
 	left: 1%;
 }
 
 #choropleth_map {
-	position: absolute;
+	display: inline-block;
 	float: left;
 	margin: 10px 10px 10px 10px;
 }
 
 #barChart {
-	position: relative;
+	display: block;
 	float: left;
 	margin: 10px 10px 10px 10px;
 }
