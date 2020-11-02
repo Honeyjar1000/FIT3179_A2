@@ -50,7 +50,7 @@
     "y": {
       "field": "Score",
       "type": "quantitative",
-      "title": "Country",
+      "title": "Happiness Score",
       "axis": {"grid": false, "labelColor": "white", "titleColor": "white"},
       "scale": {"type": "linear", "domain": [2, 8]}
     },
