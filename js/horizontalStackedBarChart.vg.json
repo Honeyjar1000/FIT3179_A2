@@ -1,0 +1,10 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"aggregate": "sum", "field": "yield"},
+    "y": {"field": "variety"},
+    "color": {"field": "site"}
+  }
+}
