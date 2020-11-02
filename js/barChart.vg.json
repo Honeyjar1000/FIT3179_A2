@@ -28,6 +28,7 @@
   "selection": {
     "continent_highlight": {
       "type": "multi",
+      "init": {"continent": "NA"},
       "fields": ["continent"],
       "bind": "legend"
     }
