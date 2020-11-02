@@ -1,123 +1,52 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Average Happiness Score By Country",
   "width": 500,
   "height": 400,
-  "title": "World Happiness",
   "data": {
-    "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
+    "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/js/worldmap.json",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
-  "params": [
-    {
-      "name": "Continent_selection",
-      "bind": {
-        "input": "select",
-        "options": [null, "NA", "SA", "EUR", "AFR", "ASIA", "OCE"],
-        "labels": [
-          "Show All",
-          "North America",
-          "South America",
-          "Europe",
-          "Africa",
-          "Asia",
-          "Oceania"
-        ],
-        "name": "Continent: "
-      }
-    }
-  ],
   "transform": [
     {
-      "filter": "Continent_selection == null || datum.continent == Continent_selection"
-    }
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
+        },
+        "key": "Country_Or_Region",
+        "fields": ["Score"]
+      }
+    },
+    {"calculate": "datum.Score", "as": "Happiness Score"}
   ],
+
   "selection": {
-    "continent_highlight": {
+    "hover": {
       "type": "multi",
-      "fields": ["continent"],
-      "bind": "legend"
-    },
-    "hover": {"type": "multi", "on": "mouseover", "empty": "none"}
+      "on": "mouseover",
+      "empty": "none"
+    }
   },
-  "mark": "circle",
+
+  "projection": {"type": "mercator"},
+  "mark": {
+    "type": "geoshape"
+  },
   "encoding": {
-    "x": {
-      "field": "Social_support",
-      "type": "quantitative",
-      "title": "Social Support",
-      "axis": {
-        "grid": false,
-        "labelColor": "white",
-        "titleColor": "white"
-      },
-      "scale": {"type": "linear", "domain": [0, 2]}
-    },
-    "y": {
+    "color": {
       "field": "Score",
       "type": "quantitative",
-      "title": "Country",
-      "axis": {
-        "grid": false,
-        "labelColor": "white",
-        "titleColor": "white"
-      },
-      "scale": {"type": "linear", "domain": [2, 8]}
-    },
-    "color": {
-      "field": "continent",
-      "type": "nominal",
-      "title": "Continent",
+      "title": "Happiness Score",
       "scale": {
-        "domain": ["NA", "SA", "EUR", "AFR", "ASIA", "OCE"],
-        "range": [
-          "#e41a1c",
-          "#984ea3",
-          "#ff7f00",
-          "#a6cee3",
-          "#377eb8",
-          "#a65628"
-        ]
+          "type": "linear",
+          "scheme": "reds"
       },
-      "condition": {"selection": "hover", "value": "gray"},
-      "legend": {
-        "title": null,
-        "labelColor": "white"
-      }
-    },
-    "opacity": {"value": 0.8, "condition": {"selection": "hover", "value": 1}},
-    "size": {
-      "field": "GDP_per_capita",
-      "type": "quantitative",
-      "title": "GPD Per Capita",
-      "legend": {
-        "labelColor": "white",
-        "titleColor": "white"
-      },
-      "scale": {
-        "type": "threshold",
-        "domain": [0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6],
-        "range": [4, 8, 16, 32, 64, 128, 492, 984]
-      }
+      "condition": {"selection": "hover", "value": "gray"}
     },
     "tooltip": [
-      {"field": "Country_Or_Region", "title": "Country", "type": "nominal"},
-      {
-        "field": "Score",
-        "title": "Happiness Score",
-        "type": "quantitative",
-        "format": ","
-      },
-      {
-        "field": "GDP_per_capita",
-        "title": "GDP Per Capita",
-        "type": "quantitative",
-        "format": ","
-      },
-      {
-        "field": "Social_support",
-        "title": "Social Support",
-        "type": "quantitative",
-        "format": ","
-      }
+      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "Score", "type": "quantitative", "title": "Happiness Score"}
     ]
   },
   "background": "black"
