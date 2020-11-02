@@ -3,8 +3,23 @@
   "data": {"url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"},
   "mark": "bar",
   "encoding": {
-    "x": {"aggregate": "sum", "field": "yield"},
-    "y": {"field": "variety"},
-    "color": {"field": "site"}
+    "x": {
+      "field": "Country_Or_Region",
+      "type": "nominal",
+      "title": "Country"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative"
+    },
+    "color": {
+      "fields": ["Healthy_life_expectancy", "Freedom_to_make_life_choices", "Generosity"],
+      "type": "nominal",
+      "scale": {
+        "domain": ["Healthy_life_expectancy", "Freedom_to_make_life_choices", "Generosity"],
+        "range": ["#e7ba52", "#c7c7c7", "#aec7e8"]
+      },
+      "title": "Wellfair"
+    }
   }
 }
