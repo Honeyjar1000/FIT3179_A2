@@ -51,6 +51,6 @@
       {"field": "Score", "type": "quantitative", "title": "Happiness Score"}
     ]
   },
-  "background": "black"
-
+  "background": "black",
+  "view": {"stroke": null}
 }
