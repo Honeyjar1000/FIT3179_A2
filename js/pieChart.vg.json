@@ -50,6 +50,5 @@
       {"field": "Healthy_life_expectancy", "type": "quantitative", "title": "Life Expectancy"}
     ]
   },
-  "view": {"stroke": null},
   "background": "black"
 }
