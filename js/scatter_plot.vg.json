@@ -8,84 +8,110 @@
     "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
   },
   "params": [
-    { 
-    "name": "Continent_selection", 
-    "bind": { 
-      "input": "select", 
-      "options": [ null, "NA", "SA", "EUR", "AFR", "ASIA", "OCE" ], 
-      "labels":[ "Show All", "North America", "South America", "Europe", "Africa", "Asia", "Oceania" ], 
-      "name": "Continent Selection: " 
-      } 
-    } 
-  ],  
-  "transform": [ 
-    {"filter": "Continent_selection == null || datum.continent == Continent_selection"}
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [null, "NA", "SA", "EUR", "AFR", "ASIA", "OCE"],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
   ],
-  "selection": { 
-    "continent_highlight": { 
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.continent == Continent_selection"
+    }
+  ],
+  "selection": {
+    "continent_highlight": {
+      "type": "multi",
+      "fields": ["continent"],
+      "bind": "legend"
+    },
+    "hover": {
       "type": "multi", 
-      "fields": ["continent"], 
-      "bind": "legend" 
-    } 
+      "on": "mouseover", 
+      "empty": "none"
+    }    
   },
   "mark": "circle",
   "encoding": {
     "x": {
       "field": "Social_support",
       "type": "quantitative",
-      "title":"Social Support Ranking",
+      "title": "Social Support Ranking",
       "axis": {"tickCount": 0.001},
-      "scale": {"type": "linear",  "domain":[0, 2]}
+      "scale": {"type": "linear", "domain": [0, 2]}
     },
     "y": {
       "field": "Score",
       "type": "quantitative",
-      "title":"Happiness Score",
-      "axis": { "tickCount": 0.1},
-      "scale": {"type": "linear", "domain":[2, 8]}
+      "title": "Happiness Score",
+      "axis": {"tickCount": 0.1},
+      "scale": {"type": "linear", "domain": [2, 8]}
     },
-    "color": { 
-      "field": "continent", 
-      "type": "nominal", 
+    "color": {
+      "field": "continent",
+      "type": "nominal",
       "title": "Continent",
       "scale": {
-        "domain": [ 
-          "NA", 
-          "SA", 
-          "EUR", 
-          "AFR", 
-          "ASIA", 
-          "OCE" 
-        ], 
-        "range": [ 
-          "#e41a1c", 
-          "#984ea3", 
-          "#ff7f00", 
-          "#a6cee3", 
-          "#377eb8", 
-          "#a65628" 
-        ] 
-      } 
+        "domain": ["NA", "SA", "EUR", "AFR", "ASIA", "OCE"],
+        "range": [
+          "#e41a1c",
+          "#984ea3",
+          "#ff7f00",
+          "#a6cee3",
+          "#377eb8",
+          "#a65628"
+        ]
+      },
+      "condition": {"selection": "hover", "value": "gray"}
     },
-    "opacity": { 
-      "value": 0.6 
-    },    
+    "opacity": {
+      "value": 0.8,
+      "condition": {"selection": "hover", "value": 1}
+    },
     "size": {
       "field": "GDP_per_capita",
       "type": "quantitative",
       "title": "GPD Per Capita",
       "scale": {
-          "type": "threshold",
-          "domain": [0,0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2.0],
-          "range": [2,4,8,16,32,64,128,246,492,984]
+        "type": "threshold",
+        "domain": [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2],
+        "range": [2, 4, 8, 16, 32, 64, 128, 246, 492, 984]
       },
       "legend": {"format": ".1s"}
     },
     "tooltip": [
       {"field": "Country_Or_Region", "title": "Country", "type": "nominal"},
-      {"field": "Score", "title": "Happiness Score", "type": "quantitative", "format": ","},
-      {"field": "GDP_per_capita", "title": "GDP Per Capita", "type": "quantitative", "format": ","},
-      {"field": "Social_support", "title": "Social Support", "type": "quantitative", "format": ","}
+      {
+        "field": "Score",
+        "title": "Happiness Score",
+        "type": "quantitative",
+        "format": ","
+      },
+      {
+        "field": "GDP_per_capita",
+        "title": "GDP Per Capita",
+        "type": "quantitative",
+        "format": ","
+      },
+      {
+        "field": "Social_support",
+        "title": "Social Support",
+        "type": "quantitative",
+        "format": ","
+      }
     ]
-  }
+  },
+  "background": "black"
 }
