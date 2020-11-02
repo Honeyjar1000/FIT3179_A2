@@ -14,7 +14,7 @@
 <div id="choropleth_map"></div> 
 <div id="scatter_plot"></div>
 <div id="barChart"></div>
-<div id="horizontalStackedBarChart"></div>
+<div id="pieChart"></div>
   
 <script type="text/javascript">
 
@@ -33,7 +33,7 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error)
   
-  var spec5 = "js/horizontalStackedBarChart.vg.json";
+  var spec5 = "js/pieChart.vg.json";
   vegaEmbed('#horizontalStackedBarChart', spec5).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error)
