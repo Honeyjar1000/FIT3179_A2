@@ -30,7 +30,10 @@
     }
   },
 
-  "projection": {"type": "orthographic"},
+  "projection": {
+    "type": "orthographic",
+    "rotate": [{"signal": "rotate0"]
+  },
   "mark": {
     "type": "geoshape"
   },
