@@ -30,7 +30,7 @@
     }
   },
 
-  "projection": {"type": "mercator"},
+  "projection": {"type": "orthographic"},
   "mark": {
     "type": "geoshape"
   },
