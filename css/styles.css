@@ -6,8 +6,6 @@
 
 #choropleth_map {
 	display: inline-block;
-	float: left;
-	margin: 10px 10px 10px 10px;
 }
 
 #barChart {
@@ -30,6 +28,6 @@ b {
 }
 
 body {
-	background-color: black;
+	background-color: white;
 	color: white;
 }
