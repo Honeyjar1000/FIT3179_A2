@@ -31,8 +31,7 @@
   },
 
   "projection": {
-    "type": "orthographic",
-    "rotate": [{"signal": "rotate0"]
+    "type": "orthographic"
   },
   "mark": {
     "type": "geoshape"
