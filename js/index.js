@@ -4,7 +4,7 @@ localStorage.setItem("attributeVar", "GDP_per_capita");
 
 function changeAttribute(attributeName) {
   localStorage.setItem("attributeVar", attributeName);
-  console.log("Update Attribute to: " + attributeName");
+  console.log("Update Attribute to: " + attributeName);
 }
 
 function toggleDropDown() {
