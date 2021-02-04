@@ -36,3 +36,6 @@ window.onclick = function(event) {
     }
   }
 }
+
+//INITIALISE GRAPHS
+changeAttribute('Perceptions_of_corruption')
