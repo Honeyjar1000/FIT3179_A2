@@ -8,19 +8,10 @@ function changeAttribute(attributeName) {
   
   if (attributeName == 'Perceptions_of_corruption') {
    var spec4 = "js/barChart.vg.json";
-   vegaEmbed('#barChart', spec4).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-   }).catch(console.error)
   } else if (attributeName == 'GDP_per_capita') {
     var spec4 = "js/barChart2.vg.json";
-    vegaEmbed('#barChart', spec4).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error)
   } else if (attributeName == 'Generosity') {
     var spec4 = "js/barChart3.vg.json";
-    vegaEmbed('#barChart', spec4).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error) 
   }
 }
 
@@ -37,5 +28,10 @@ window.onclick = function(event) {
   }
 }
 
+vegaEmbed('#barChart', spec4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error)
+
 //INITIALISE GRAPHS
-changeAttribute('Perceptions_of_corruption')
+changeAttribute('Perceptions_of_corruption');
+}
