@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "A simple bar chart with embedded data.",
   "width": 300,
   "height": 200,
   "data": {
@@ -48,11 +47,7 @@
     "y": {
       "field": "Perceptions_of_corruption",
       "type": "quantitative",
-      "title": "Perception Of Corruption",
-      "axis": {
-        "labelColor": "white",
-        "titleColor": "white"
-      }
+      "title": "Perception Of Corruption"
     },
     "color": {
       "field": "continent",
@@ -78,6 +73,5 @@
         "type": "quantitative"
       }
     ]
-  },
-  "background": "black"
+  }
 }
