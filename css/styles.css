@@ -1,33 +1,36 @@
-#scatter_plot {
-	display: inline;
-	margin: 10px 10px 10px 10px;
-	left: 1%;
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
-#choropleth_map {
-	display: inline-block;
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
 }
 
-#barChart {
-	display: block;
-	float: left;
-	margin: 10px 10px 10px 10px;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-#pieChart {
-	display: inline-block;
-	float: left;
-	margin: 10px 10px 10px 10px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-b {
-	font-color: "white";
-	position: absolute;
-	font-size: 20px;
-	margin: auto;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-body {
-	background-color: white;
-	color: white;
-}
+.dropdown a:hover {background-color: #ddd;}
