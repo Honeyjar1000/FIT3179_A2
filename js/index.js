@@ -6,3 +6,7 @@ function changeAttribute(attributeName) {
   localStorage.setItem("attributeVar", attributeName);
   console.log("Update Attribute to: " + attributeName");
 }
+
+function toggleDropDown() {
+   document.getElementById("myDropdown").classList.toggle("show"); 
+}
