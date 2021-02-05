@@ -1,6 +1,6 @@
 // Controls which of the graphs is on display
 
-localStorage.setItem("attributeVar", "GDP_per_capita");
+localStorage.setItem("continentSelect", "NA");
 
 function changeAttribute(attributeName) {
   localStorage.setItem("attributeVar", attributeName);
@@ -12,6 +12,12 @@ function changeAttribute(attributeName) {
     var spec4 = "js/barChart2.vg.json";
   } else if (attributeName == 'Generosity') {
     var spec4 = "js/barChart3.vg.json";
+  } else if (attributeName == 'Freedom_to_make_life_choices') {
+    var spec4 = "js/barChart4.vg.json";
+  } else if (attributeName == 'Healthy_life_expectancy') {
+    var spec4 = "js/barChart5.vg.json";
+  } else if (attributeName == 'Social_support') {
+    var spec4 = "js/barChart6.vg.json";
   }
   
   updateAttribute(spec4);
