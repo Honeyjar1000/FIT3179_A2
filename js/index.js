@@ -13,9 +13,8 @@ function changeAttribute(attributeName) {
   } else if (attributeName == 'Generosity') {
     var spec4 = "js/barChart3.vg.json";
   }
-  vegaEmbed('#barChart', spec4).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error)
+  
+  updateAttribute(spec4);
 }
 
 window.onclick = function(event) {
