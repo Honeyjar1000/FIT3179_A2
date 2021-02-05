@@ -30,6 +30,13 @@
   function toggleDropDown() {
    document.getElementById("myDropdown").classList.toggle("show"); 
   }
+ 
+  function updateAttribute(spec4) {
+   console.log("function call: update attributes")
+   vegaEmbed('#barChart', spec4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+   }).catch(console.error)
+  }
   
 </script>
 </body>
