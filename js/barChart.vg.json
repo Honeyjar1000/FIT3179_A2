@@ -8,7 +8,7 @@
   "params": [
     {
       "name": "Continent_selection",
-      "value": localstorage.getitem("continentSelect"),
+      "value": "NA",
       "bind": {
         "input": "select",
         "options": ["NA", "SA", "EUR", "AFR", "ASIA", "OCE"],
