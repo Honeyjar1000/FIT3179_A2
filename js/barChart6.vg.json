@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 300,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
+  },
+  "params": [
+    {
+      "name": "Continent_selection",
+      "value": "NA",
+      "bind": {
+        "input": "select",
+        "options": ["NA", "SA", "EUR", "AFR", "ASIA", "OCE"],
+        "labels": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.continent == Continent_selection"
+    }
+  ],
+  "selection": {
+    "continent_highlight": {
+      "type": "multi",
+      "fields": ["continent"],
+      "bind": "legend"
+    },
+    "hover": {"type": "multi", "on": "mouseover", "empty": "none"}
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Country_Or_Region", "type": "nominal", "title": "Country"},
+    "y": {
+      "field": "Social_support",
+      "type": "quantitative",
+      "title": "Social support"
+    },
+    "color": {
+      "field": "continent",
+      "type": "nominal",
+      "scale": {
+        "domain": ["NA", "SA", "EUR", "AFR", "ASIA", "OCE"],
+        "range": [
+          "#e41a1c",
+          "#984ea3",
+          "#ff7f00",
+          "#a6cee3",
+          "#377eb8",
+          "#a65628"
+        ]
+      },
+      "condition": {"selection": "hover", "value": "gray"}
+    },
+    "tooltip": [
+      {"field": "Country_Or_Region", "title": "Country", "type": "nominal"},
+      {
+        "field": "Social_support",
+        "title": "Social support",
+        "type": "quantitative"
+      }
+    ]
+  }
+}
