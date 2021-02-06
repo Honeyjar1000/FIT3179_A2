@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 300,
+
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  },
+
+
+  "selection": {
+    "hover": {
+      "type": "multi",
+      "on": "mouseover",
+      "empty": "none"
+    }
+  },
+  
+  "data": {
+    "name": "world",
+    "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/js/worldmap.json",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  },
+
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
+        },
+        "key": "Country_Or_Region",
+        "fields": ["Freedom_to_make_life_choices"]
+      }
+    },
+    {"calculate": "datum.Freedom_to_make_life_choices", "as": "Freedom to make life choices"}
+  ],
+
+  "projection": {
+    "type": "mercator",
+    "rotate": [0,0,0]
+  },
+  "mark": {
+    "type": "geoshape"
+  },
+  "encoding": {
+    "color": {
+      "field": "Freedom_to_make_life_choices",
+      "type": "quantitative",
+      "title": "Freedom to make life choices",
+      "scale": {
+          "type": "linear"
+      },
+      "condition": {"selection": "hover", "value": "gray"}
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal"},
+      {"field": "Freedom_to_make_life_choices", "type": "quantitative"}
+    ]
+  }
+}
