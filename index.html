@@ -10,6 +10,7 @@
 <body>
 <b> World Happiness 2019 </b><br>
 <div id="barChart"></div> 
+<div id="pieChart"></div> 
  
 <div class="dropdown">
   <button class="dropbtn" onClick="toggleDropDown()">Select Attribute</button>
@@ -31,6 +32,10 @@
   function updateAttribute(spec4) {
    console.log("function call: update attribute " + spec4)
    vegaEmbed('#barChart', spec4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+   }).catch(console.error)
+    
+   vegaEmbed('#pieChart', spec3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
    }).catch(console.error)
   }
