@@ -9,6 +9,7 @@
 </head>
 <body>
 <b> World Happiness 2019 </b><br>
+<div id="happinessMap"></div> 
 <div id="barChart"></div> 
 <div id="pieChart"></div> 
  
@@ -26,7 +27,7 @@
   
 <script type="text/javascript">
   spec1 = "js/chloropleth_map.vg.json";
-  vegaEmbed('#pieChart', spec1).then(function(result) {
+  vegaEmbed('#happinessMap', spec1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
    }).catch(console.error)
   
