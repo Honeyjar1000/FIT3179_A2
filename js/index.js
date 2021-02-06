@@ -34,7 +34,6 @@ function changeAttribute(attributeName) {
     var spec4 = "js/barChart6.vg.json";
   }
   
-  console.log(spec4,spec3);
   updateAttribute(spec4,spec3);
 }
 
