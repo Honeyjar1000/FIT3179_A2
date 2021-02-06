@@ -41,5 +41,12 @@
       {"field": "continent", "type": "nominal"},
       {"field": "PercentOfTotal", "aggregate": "mean", "type": "quantitative"}
     ]
+  },
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
   }
 }
