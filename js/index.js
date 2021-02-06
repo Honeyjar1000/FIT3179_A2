@@ -3,11 +3,11 @@
 localStorage.setItem("continentSelect", "NA");
 
 function changeAttribute(attributeName) {
-  localStorage.setItem("attributeVar", attributeName);
+  
   console.log("Update Attribute to: " + attributeName);
   
   if (attributeName == 'Perceptions_of_corruption') {
-   var spec3 = "js/pieChart.vg.json";
+    var spec3 = "js/pieChart.vg.json";
   } else if (attributeName == 'GDP_per_capita') {
     var spec3 = "js/pieChart2.vg.json";
   } else if (attributeName == 'Generosity') {
@@ -34,6 +34,7 @@ function changeAttribute(attributeName) {
     var spec4 = "js/barChart6.vg.json";
   }
   
+  console.log(spec4,spec3);
   updateAttribute(spec4,spec3);
 }
 
