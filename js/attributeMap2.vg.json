@@ -54,6 +54,10 @@
           "type": "linear"
       },
       "condition": {"selection": "hover", "value": "gray"}
-    }
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal"},
+      {"field": "GDP_per_capita", "type": "quantitative"}
+    ]
   }
 }
