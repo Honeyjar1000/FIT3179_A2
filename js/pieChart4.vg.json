@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 300,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Honeyjar1000/FIT3179_week10/main/data/2019.csv"
+  },
+  "transform": [{
+    "joinaggregate": [{
+      "op": "sum",
+      "field": "Freedom_to_make_life_choices",
+      "as": "Total_Freedom_to_make_life_choices"
+    }]
+  },
+  {
+    "calculate": "datum.Freedom_to_make_life_choices/datum.Total_Freedom_to_make_life_choices * 100",
+    "as": "PercentOfTotal"
+  }],
+  "selection": {
+    "hover": {"type": "multi", "on": "mouseover", "empty": "none"}},
+  "mark": "arc",
+  "encoding": {
+    "theta": {"field": "PercentOfTotal", "aggregate": "mean"},
+    "color": {
+      "field": "continent",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": ["NA", "SA", "EUR", "AFR", "ASIA", "OCE"],
+        "range": [
+          "#e41a1c",
+          "#984ea3",
+          "#ff7f00",
+          "#a6cee3",
+          "#377eb8",
+          "#a65628"
+        ]
+      }
+    },
+    "tooltip": [
+      {"field": "continent", "type": "nominal"}
+    ]
+  }
+}
