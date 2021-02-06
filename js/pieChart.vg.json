@@ -38,7 +38,8 @@
       }
     },
     "tooltip": [
-      {"field": "continent", "type": "nominal"}
+      {"field": "continent", "type": "nominal"},
+      {"field": "PercentOfTotal", "aggregate": "mean", "type": "quantitive"}
     ]
   }
 }
