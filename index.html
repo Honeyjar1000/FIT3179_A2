@@ -12,6 +12,7 @@
 <div id="happinessMap"></div> 
 <div id="barChart"></div> 
 <div id="pieChart"></div> 
+<div id="attributeMap"></div> 
  
 <div class="dropdown">
   <button class="dropbtn" onClick="toggleDropDown()">Select Attribute</button>
@@ -35,13 +36,17 @@
    document.getElementById("myDropdown").classList.toggle("show"); 
   }
  
-  function updateAttribute(spec4, spec3) {
+  function updateAttribute(spec4, spec3, spec2) {
     // Display graphs
    vegaEmbed('#barChart', spec4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
    }).catch(console.error);
     
    vegaEmbed('#pieChart', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+   }).catch(console.error);
+    
+   vegaEmbed('#attributeMap', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
    }).catch(console.error);
     
