@@ -45,16 +45,19 @@
 #happinessMap {
   display: inline-block;
   float: center;
+  left: 25%;
 }
 
 #attributeMap {
   display: block;
   float: center;
+  left: 25%;
 }
 
 #pieChart {
   display: inline-block;
   float: center;
+  bottom: 50px;
 }
 
 .button {
