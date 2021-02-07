@@ -141,7 +141,7 @@ html, body {
 #attributeMap {
   display: block;
   float: center;
-  left: 250px;
+  left: 150px;
 }
 
 #pieChart {
@@ -161,4 +161,10 @@ button {
   font-size: 16px;
   margin: 4px 5px;
   cursor: pointer;
+}
+
+#content {
+  position: relative;
+  left: 100px;
+
 }
