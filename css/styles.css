@@ -38,15 +38,23 @@
 .show {display:block;}
 
 #barChart {
+  float: center;
   display: inline-block;
 }
 
 #happinessMap {
   display: inline-block;
+  float: center;
 }
 
 #attributeMap {
   display: block;
+  float: center;
+}
+
+#pieChart {
+  display: inline-block;
+  float: center;
 }
 
 .button {
