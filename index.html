@@ -1,52 +1,147 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
 <head>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   <!-- Import vega-embed -->
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #292929;
+            font: 90% Roboto, Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        p {
+            padding: 0 10px;
+            line-height: 1.8;
+        }
+
+        ul li {
+            padding-right: 10px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            padding: 5px 20px;
+            margin: 0;
+        }
+
+        div#header {
+            position: relative;
+        }
+
+        div#header h1 {
+            height: 80px;
+            line-height: 80px;
+            margin: 0;
+            padding-left: 10px;
+            background: #e0e0e0;
+            color: #292929;
+        }
+
+        div#header a {
+            position: absolute;
+            right: 0;
+            top: 23px;
+            padding: 10px;
+            color: #006;
+        }
+
+        div#navigation {
+            background: #7cb71c;
+        }
+
+        div#navigation li {
+            list-style: none;
+        }
+
+        div#extra {
+            background: #147FA9;
+        }
+
+        div#footer {
+            background: #42444e;
+            color: #fff;
+        }
+
+        div#footer p {
+            padding: 20px 10px;
+        }
+
+        div#wrapper {
+            float: left;
+            width: 70%;
+        }
+
+        div#navigation {
+            float: right;
+            width: 29.9%;
+        }
+
+        div#extra {
+            clear: both;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-<b> World Happiness 2019 </b><br>
-<div id="happinessMap"></div> 
-<div id="barChart"></div> 
-<div id="pieChart"></div> 
-<div id="attributeMap"></div> 
-  
- <button onclick="changeAttribute('Perceptions_of_corruption')">Perception of corruption</button>
- <button onclick="changeAttribute('GDP_per_capita')">GDP per capita</button>
- <button onclick="changeAttribute('Generosity')">Generosity</button>
- <button onclick="changeAttribute('Freedom_to_make_life_choices')">Freedom</button>
- <button onclick="changeAttribute('Healthy_life_expectancy')">Life expectancy</button>
- <button onclick="changeAttribute('Social_support')">Social support</button>
+<div id="container">
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+    <div id="wrapper">
+        <div id="content">
+          <div id="happinessMap"></div>
+          <button onclick="changeAttribute('Perceptions_of_corruption')">Perception of corruption</button>
+          <button onclick="changeAttribute('GDP_per_capita')">GDP per capita</button>
+          <button onclick="changeAttribute('Generosity')">Generosity</button>
+          <button onclick="changeAttribute('Freedom_to_make_life_choices')">Freedom</button>
+          <button onclick="changeAttribute('Healthy_life_expectancy')">Life expectancy</button>
+          <button onclick="changeAttribute('Social_support')">Social support</button>
+          <div id="attributeMap"></div>
+        </div>
+    </div>
+    <div id="extra">
 
+    </div>
+    <div id="footer"><p>
+      <div id="barChart"></div>
+      <div id="pieChart"></div>
+    </p>
+    </div>
+</div>
 <script type="text/javascript">
   spec1 = "js/chloropleth_map.vg.json";
   vegaEmbed('#happinessMap', spec1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
    }).catch(console.error)
-  
+
   function toggleDropDown() {
-   document.getElementById("myDropdown").classList.toggle("show"); 
+   document.getElementById("myDropdown").classList.toggle("show");
   }
- 
+
   function updateAttribute(spec4, spec3, spec2) {
     // Display graphs
    vegaEmbed('#barChart', spec4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
    }).catch(console.error);
-    
+
    vegaEmbed('#pieChart', spec3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
    }).catch(console.error);
-    
+
    vegaEmbed('#attributeMap', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
    }).catch(console.error);
-    
+
   }
-  
 </script>
 </body>
 <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
