@@ -40,24 +40,25 @@
 #barChart {
   float: center;
   display: inline-block;
+  left: 110px;
 }
 
 #happinessMap {
   display: inline-block;
   float: center;
-  left: 25%;
+  left: 250px;
 }
 
 #attributeMap {
   display: block;
   float: center;
-  left: 25%;
+  left: 250px;
 }
 
 #pieChart {
   display: inline-block;
   float: center;
-  bottom: 50px;
+  left: 120px;
 }
 
 .button {
